@@ -511,7 +511,7 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 768px) and (orientation: landscape) {
 
     .btn {
         height: 1.9rem;
@@ -552,7 +552,7 @@ footer {
     }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 430px) and (orientation: landscape) {
     .btn {
         height: 1.9rem;
     }
@@ -568,7 +568,7 @@ footer {
 
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (orientation:landscape) {
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
     }
