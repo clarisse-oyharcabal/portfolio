@@ -567,4 +567,9 @@ footer {
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
     }
+
+    
+    .btn {
+        height: 1.9rem;
+    }
 }
