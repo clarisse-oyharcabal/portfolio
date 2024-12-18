@@ -1,0 +1,556 @@
+:root {
+    --primary-color: #00ff9d;
+    --secondary-color: #0a192f;
+    --text-color: #e6f1ff;
+    --dark-bg: #0a1930;
+    --card-bg: rgba(2, 12, 27, 0.7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+
+
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(10, 25, 47, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, var(--primary-color), #00ffff, #ff00ff, var(--primary-color));
+    background-size: 300% 300%; /* Taille augmentée pour permettre le mouvement */
+    -webkit-background-clip: text; /* Applique le dégradé uniquement au texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour afficher le dégradé */
+    animation: gradientFlow 6s infinite ease-in-out; /* Animation fluide et infinie */
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%; /* Départ */
+    }
+    50% {
+        background-position: 100% 50%; /* Milieu : va jusqu'à la fin */
+    }
+    100% {
+        background-position: 0% 50%; /* Retour au début */
+    }
+}
+
+
+.logo-photo {
+    width:150px; /* Taille de l'image */
+    height: 140px;
+    border-radius: 50%; /* Rend l'image ronde */
+    margin-right: 10px; /* Espacement entre la photo et le texte */
+}
+
+
+.nav-links {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    justify-content: center; /* Aligne les liens horizontalement */
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: row; /* Affiche les liens horizontalement */
+    position: absolute;
+    top: 5%;
+    width: 90%;
+    background: transparent;
+    padding: 1.2rem;
+    justify-content: right; /* Centre les éléments horizontalement */
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    margin-top: -12px;
+}
+
+.burger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background: linear-gradient(45deg, var(--primary-color), #00ffff, #00b7ff, var(--primary-color));
+    margin: 2.8px;
+    transition: 0.4s;
+}
+
+.burger-menu.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px); /* Première barre transformée en croix */
+}
+
+.burger-menu.active .bar:nth-child(2) {
+    opacity: 0; /* Cache la barre du milieu */
+}
+
+.burger-menu.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px); /* Troisième barre transformée en croix */
+}
+
+
+/* Sections */
+.section {
+    font-size: 1.1rem;
+    min-height: 100vh;
+    padding: 6rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: slideFadeIn 5s ease-out;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+/* Styles de base */
+
+/* Section présentation */
+.content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px; /* Espace entre les deux parties */
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Texte à gauche */
+.text-content {
+    flex: 1; /* Prend 50% de l'espace */
+    max-width: 600px;
+}
+
+.highlight-text {
+    font-size: 2.9rem;
+    margin-bottom: 1rem;
+    margin-top: -5rem;
+    background: linear-gradient(45deg, rgb(4, 9, 35), #10181f);
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
+    display: inline-block; /* Nécessaire pour appliquer l'animation */
+    animation: bounce 3s infinite ease-in-out; /* Animation bounce */
+}
+
+.gradient-text {
+    font-size: 2.5rem;
+    background: linear-gradient(45deg, var(--primary-color), #00e1ff);
+    -webkit-background-clip: text; /* Applique le dégradé au texte */
+    -webkit-text-fill-color: transparent; /* Rend le texte transparent pour voir le dégradé */
+    display: inline-block; /* Nécessaire pour appliquer l'animation */
+    animation: bounce 3s infinite ease-in-out; /* Animation bounce */
+}
+
+
+.text-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.text-content p:hover {
+    transform: scale(1.1); /* Agrandit l'image */
+}
+
+/* Image et réseaux sociaux à droite */
+.image-social {
+    flex: 1; /* Prend 50% de l'espace */
+    text-align: center;
+}
+
+.image-social img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%; /* Image en cercle */
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.9s ease, box-shadow 0.3s ease;
+}
+
+.image-social img:hover {
+    transform: rotate(360deg); /* Rotation légère */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Boutons de réseaux sociaux */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-btn {
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: #0077b5; /* LinkedIn par défaut */
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); /* Position initiale */
+    }
+    50% {
+        transform: translateY(-8px); /* Déplacement vers le haut */
+    }
+}
+
+
+.typing-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.social-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px 2px #00ff9d;
+}
+
+/* Projects Section */
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05); /* Légère croissance */
+        opacity: 0.8; /* Légère diminution d'opacité */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+#projets {
+    margin-top: 0; /* Ajoute un léger espacement au-dessus */
+    padding-top: 10px; /* Ajuste légèrement le padding interne */
+}
+
+#projets h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff; /* Texte blanc */
+    position: relative; /* Pour positionner le soulignement */
+    overflow: hidden;
+    animation: pulseEffect 1.5s infinite ease-in-out;
+}
+
+/* Animation principale : apparition avec glissement */
+@keyframes slideFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Glisse vers le haut */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Stable */
+    }
+}
+
+/* Soulignement dynamique */
+#projets h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%; /* Départ au milieu */
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), #00e1ff);
+    transition: width 1s ease-out, left 1s ease-out; /* Animation fluide */
+}
+
+/* Au survol, le soulignement s'étend */
+#projets h2:hover::after {
+    width: 100%;
+    left: 0; /* S'étend depuis le centre vers les bords */
+}
+
+
+.projects-grid {
+    display: grid;
+    gap: 3rem;
+    width: 100%;
+    max-width: 1500px;
+    padding: 1rem;
+}
+
+.project-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px 2px #00ff9d;
+}
+
+.project-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.project-links .btn {
+    font-size: 0.8rem; /* Réduit la taille du texte */
+    padding: 0.6rem 0.8rem; /* Réduit l'espacement intérieur */
+    border-radius: 7px; /* Garde des bords arrondis */
+    text-transform: uppercase; /* Maintient le style de texte */
+    line-height: 1; /* Ajuste la hauteur de ligne */
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.project-links .btn:hover {
+    transform: scale(1.05); /* Légère augmentation au survol */
+    background-color: var(--primary-color); /* Accentue la couleur */
+    color: #fff; /* Texte blanc au survol */
+}
+.badge {
+    display: inline-block;
+    padding: 0.3rem 0.6rem;
+    background:rgb(0, 225, 255, 0.5);
+    color:#ff00ff ;
+    font-size: 0.8rem;
+    border-radius: 15px;
+    text-transform: uppercase;
+}
+
+
+/* Contact Form */
+
+#contact {
+    padding-top: 10px;
+}
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 15px 2px #00ff9d;
+}
+
+#contact h2 {
+    padding: 1rem;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #fff; /* Texte blanc */
+    animation: pulseEffect 1.5s infinite ease-in-out;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--text-color);
+    color: var(--text-color);
+    font-size: 1rem;
+}
+
+.form-group label {
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+    pointer-events: none;
+}
+
+
+
+.form-group input:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:valid ~ label {
+    top: -1.2rem;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.btn {
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 1.3rem;
+    }
+
+    /* Déplacer l'image et les liens sociaux en bas */
+    .image-social {
+        order: 2; /* Mettre l'image et les liens sociaux après le texte */
+        margin-top: 20px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

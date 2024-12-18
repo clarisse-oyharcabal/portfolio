@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio IA</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <nav class="navbar">
+        <div class="logo">
+            Clarisse.AI
+        </div>
+        <div class="burger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#presentation">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="presentation" class="section">
+            <div class="container fade-in content-wrapper">
+                <div class="text-content">
+                <h1>
+                    <span class=gradient-text> Intelligence Artificielle | Data  </span>
+                    <span class="highlight-text"><br>& Innovation</span>
+                </h1>
+                <p class="typing-text">Etudiante en première année en Bachelor IT à l'école de La Plateforme à Marseille, je suis passionnée par l'intelligence artificielle et la science des données. 
+                    Je souhaite allier mes compétences en informatique et mes études en sciences sociales 
+                </p>
+            </div>
+            <div class ="image-social"> 
+                <img src="images/femme.jpg" alt="Photo" class="logo-photo">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/clarisseoyhar%C3%A7abal/" class="social-btn" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/clarisse-oyharcabal" class="social-btn" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:clarisse.oyharcabal@laplateforme.io" class="social-btn">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+           </div>
+        </section>
+
+        <section id="projets" class="section">
+            <h2>Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Tic-Tac-Toe</h3>
+                        <p>Jeu du Tic-Tac-Toe (morpion) avec un bot de niveau facile et un bot de niveau moyen, algorithme minimax en cours de développement.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/clarisse-oyharcabal/TicTacToe.git" class="btn" target="_blank">Code</a>
+                            <div class="project-lang">
+                                <span class="badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Création d'un FanSite</h3>
+                        <p>Site de type FanSite sur les pionnières de l'informatique notamment Ada Lovelace. Nous étions en groupe de trois.</p>
+                        <div class="project-links">
+                            <a href="https://github.com/clarisse-oyharcabal/FanSite.git" class="btn" target="_blank">Code</a>
+                            <a href="https://clarisse-oyharcabal.github.io/FanSite/" class="btn" target="_blank">Demo</a>
+                            <div class="project-lang">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Création d'une IA | En cours...</h3>
+                        <p>Solution innovante qui combine intelligence artificielle, psychologie et interaction humaine pour transformer l'expérience éducative.</p>
+                        <div class="project-links">
+                            <div class="project-lang">
+                                <span class="badge">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Me Contacter</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required>
+                    <label for="name">Nom</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Portfolio IA - Tous droits réservés</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
