@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Animation de typing pour le texte de présentation
-const text = "afin de développer des solutions innovantes.";
+const text = "et mes études en Psychologie et Sociologie afin de développer des solutions innovantes.";
 let index = 0;
 const typingText = document.querySelector('.typing-text');
 
