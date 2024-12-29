@@ -143,7 +143,7 @@ body {
 
 /* Sections */
 .section {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     min-height: 100vh;
     padding: 6rem 3rem;
     display: flex;
@@ -550,7 +550,13 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+
+    .section {
+        font-size: 1rem;
+      
 }
+    }
+
 
 @media (max-width: 430px) {
     .btn {
@@ -572,7 +578,7 @@ footer {
     .projects-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-
+ 
     
     .btn {
         height: 1.9rem;
