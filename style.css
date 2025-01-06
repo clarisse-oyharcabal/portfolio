@@ -393,10 +393,11 @@ body {
 
 
 .btn {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    font-weight: bold;
     background: transparent;
     color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 1.5px solid var(--primary-color);
     padding: 0.6rem 0.8rem;
     border-radius: 10px;
     cursor: pointer;
@@ -412,13 +413,16 @@ body {
     background-color: var(--primary-color); /* Accentue la couleur */
     color: #fff; /* Texte blanc au survol */
 }
+
 .badge {
     display: inline-block;
     padding: 0.3rem 0.6rem;
+    margin-bottom: 0.4rem;
     background:rgb(0, 225, 255, 0.5);
     color:#ff00ff ;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     border-radius: 15px;
+    font-weight: bold;
     text-transform: uppercase;
 }
 
@@ -567,6 +571,7 @@ footer {
         font-size: 1rem;
       
 }
+
     }
 
 
