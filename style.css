@@ -566,6 +566,12 @@ footer {
 
 @media (max-width: 520px) {
     .nav-links {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 520px) and (orientation:landscape) {
+    .nav-links {
         font-size: 0.8rem;
     }
 }
