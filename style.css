@@ -577,18 +577,16 @@ footer {
 
 @media (max-width: 430px) {
 
-    #contact {
-        margin-top: -5rem;
-        margin-bottom: -3rem;
-    }
-
     .btn {
         height: 1.9rem;
     }
 
 
 .nav-links.active {
-    font-size: 0.45rem;
+    font-size: 0.65rem;
+    width: 92%;
+    top: 4%;
+    
 }
 
 .logo {
@@ -597,6 +595,12 @@ footer {
 
 .section {
     font-size: 0.7rem;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 }
