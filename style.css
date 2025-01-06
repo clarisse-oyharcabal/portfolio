@@ -511,30 +511,31 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
 
+@media (min-width: 1024px) and (orientation:landscape) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+    
     .btn {
         height: 1.9rem;
-    } 
-    
+    }
+}
+
+
+@media (max-width: 767px) {
     .content-wrapper {
-        flex-direction: column;
-        gap: 30px;
-        padding: 20px;
+        flex-direction: column; /* Aligne le texte et l'image verticalement */
     }
 
-    .text-content h1 {
-        font-size: 2rem;
-    }
-
-    .text-content p {
-        font-size: 1.3rem;
-    }
-
-    /* Déplacer l'image et les liens sociaux en bas */
     .image-social {
-        order: 2; /* Mettre l'image et les liens sociaux après le texte */
-        margin-top: 20px;
+        order: 2; /* L'image et les liens sociaux seront toujours en bas */
+        margin-top: 20px; /* Ajoute un petit espacement au-dessus de l'image */
+    }
+
+    .text-content {
+        order: 1; /* Le texte reste au-dessus */
     }
 
     .social-links {
@@ -552,39 +553,19 @@ footer {
     }
 
     .section {
-        font-size: 1rem;
-      
-}
+        font-size: 0.8rem;
     }
+}
 
-
-@media (max-width: 430px) and (orientation:landscape) {
-    .btn {
-        height: 1.9rem;
+/* Pour s'assurer que l'image-social est toujours en bas même en mode paysage sur petits écrans */
+@media (max-width: 767px) and (orientation: landscape) {
+    .image-social {
+        order: 2; /* Toujours en bas même en mode paysage */
     }
-
-
-.nav-links.active {
-    font-size: 0.7rem;
 }
 
-.logo {
-    font-size: 1.1rem;
-}
-
-.section {
-    font-size: 0.75rem;
-}
-
-}
-
-@media (min-width: 1024px) and (orientation:landscape) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
- 
-    
-    .btn {
-        height: 1.9rem;
+@media (max-width: 520px) {
+    .nav-links {
+        font-size: 0.8rem;
     }
 }
