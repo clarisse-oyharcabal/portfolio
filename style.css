@@ -511,6 +511,18 @@ footer {
 }
 
 /* Responsive Design */
+@media (min-width: 1024px) and (orientation:landscape) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+ 
+    
+    .btn {
+        height: 1.9rem;
+    }
+}
+
+
 @media (max-width: 768px) {
 
     .btn {
@@ -578,13 +590,3 @@ footer {
 
 }
 
-@media (min-width: 1024px) and (orientation:landscape) {
-    .projects-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
- 
-    
-    .btn {
-        height: 1.9rem;
-    }
-}
