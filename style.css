@@ -578,6 +578,10 @@ footer {
       
 }
 
+.badge {
+    font-size: 0.65rem;
+}
+
     }
 
 
@@ -622,6 +626,7 @@ footer {
     align-items: center;
     width: 100%;
 }
+
 
 }
 
