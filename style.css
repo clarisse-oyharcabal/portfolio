@@ -592,6 +592,14 @@ footer {
     font-size: 1rem;
 }
 
+.section {
+    font-size: 0.7rem;
+
+}
+
+.projects-grid {
+    grid-template-columns: 1fr;
+}
 
 }
 
