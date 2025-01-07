@@ -603,14 +603,23 @@ footer {
 }
 
 .projects-grid {
-    grid-template-columns: 1fr;
-    justify-content: center; /* Centre les éléments horizontalement */
-        align-items: center; /* Centre les éléments verticalement si nécessaire */
-        text-align: center;
+    display: grid;
+    grid-template-columns: 1fr; /* Une seule colonne */
+    justify-items: center; /* Centre chaque élément horizontalement */
+    align-items: center; /* Centre chaque élément verticalement */
+    padding: 0 1rem; /* Ajoute un petit padding pour l'espacement */
 }
 
 .project-card {
-    margin: 0 auto; /* Centre les cartes */
+    margin: 1rem auto; /* Centre les cartes et ajoute un espacement autour */
+    width: 100%; /* Assure que les cartes prennent toute la largeur possible */
+}
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 }
