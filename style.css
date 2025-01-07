@@ -418,12 +418,13 @@ body {
     display: inline-block;
     padding: 0.3rem 0.6rem;
     margin-bottom: 0.4rem;
-    background:rgb(0, 225, 255, 0.5);
-    color:#ff00ff ;
-    font-size: 0.85rem;
+    background:rgb(0, 225, 255, 0.3);
+    color:#00ff91 ;
+    font-size: 0.8rem;
     border-radius: 15px;
     font-weight: bold;
     text-transform: uppercase;
+    margin-right: 0.2rem;
 }
 
 
