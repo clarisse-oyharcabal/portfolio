@@ -627,6 +627,9 @@ footer {
     width: 100%;
 }
 
+.badge {
+    font-size: 0.65rem;
+}
 
 }
 
