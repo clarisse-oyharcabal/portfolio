@@ -565,8 +565,13 @@ footer {
 
     .projects-grid {
         grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
     }
 
+    .project-card {
+        margin: 0 auto; /* Assure le centrage horizontal */
+    }
     .section {
         font-size: 1rem;
       
@@ -599,6 +604,13 @@ footer {
 
 .projects-grid {
     grid-template-columns: 1fr;
+    justify-content: center; /* Centre les éléments horizontalement */
+        align-items: center; /* Centre les éléments verticalement si nécessaire */
+        text-align: center;
+}
+
+.project-card {
+    margin: 0 auto; /* Centre les cartes */
 }
 
 }
