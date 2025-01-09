@@ -150,8 +150,8 @@ body {
     width: 100%;
     position: relative;
     height: 3rem;
-    margin-top: 7rem;
-    margin-bottom: -4rem;
+    margin-top: 5rem;
+    margin-bottom: -5rem;
     
 }
 
@@ -180,6 +180,7 @@ body {
     justify-content: center;
     align-items: center;
     animation: slideFadeIn 5s ease-out;
+    margin-bottom: -2rem;
 }
 
 .container {
