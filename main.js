@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Animation de typing pour le texte de présentation
-const text = "et mes études en Psychologie et Sociologie afin de développer des solutions innovantes.";
+const text = "je suis passionnée par l'intelligence artificielle et la science des données. Je souhaite allier mes compétences en informatique et mes études en Psychologie et Sociologie afin de développer des solutions innovantes.";
 let index = 0;
 const typingText = document.querySelector('.typing-text');
 
