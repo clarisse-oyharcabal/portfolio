@@ -140,6 +140,36 @@ body {
     transform: rotate(-45deg) translate(5px, -5px); /* Troisième barre transformée en croix */
 }
 
+.banniere {
+    background-color: rgba(247, 69, 205, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    height: 3rem;
+    margin-top: 7rem;
+    margin-bottom: -4rem;
+    border-top: 0.3rem double  rgba(247, 69, 205, 0.2);
+    border-bottom: 0.3rem double rgba(247, 69, 205, 0.2);;
+}
+
+.banniere p {
+    white-space: nowrap;
+    animation: defilement 20s linear infinite;
+    font-weight: bold;
+}
+
+@keyframes defilement {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
 /* Sections */
 .section {
@@ -160,7 +190,6 @@ body {
 }
 
 
-/* Styles de base */
 
 /* Section présentation */
 .content-wrapper {
