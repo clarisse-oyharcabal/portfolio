@@ -141,7 +141,7 @@ body {
 }
 
 .banniere {
-    background-color: rgba(247, 69, 205, 0.2);
+    background-color: rgba(247, 69, 205, 0.1);
     color: white;
     display: flex;
     justify-content: center;
@@ -152,8 +152,7 @@ body {
     height: 3rem;
     margin-top: 7rem;
     margin-bottom: -4rem;
-    border-top: 0.3rem double  rgba(247, 69, 205, 0.2);
-    border-bottom: 0.3rem double rgba(247, 69, 205, 0.2);;
+    
 }
 
 .banniere p {
