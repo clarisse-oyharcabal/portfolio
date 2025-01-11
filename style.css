@@ -161,6 +161,11 @@ body {
     font-weight: bold;
 }
 
+.banniere:hover {
+transform: scale(1.2); /* Augmente la taille du texte */
+transition: transform 0.5s ease; /* Ajoute une transition fluide */
+}
+
 @keyframes defilement {
     0% {
         transform: translateX(100%);
