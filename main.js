@@ -138,8 +138,26 @@ const contactForm = document.getElementById('contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Ici vous pouvez ajouter la logique d'envoi du formulaire
-        alert('Message envoyé !');
-        contactForm.reset();
+        // Envoi du formulaire via Formspree
+        const formData = new FormData (contactForm);
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                // Si la soumission réussit
+                alert('Message envoyé avec succès, merci !');
+                contactForm.reset();
+            } else {
+                // Si la soumission échoue (erreur côté serveur)
+                alert('Erreur lors de l\'envoie du message. Veuillez réessayer.');
+            }
+        })
+        .catch(error => {
+            // Erreur réseau ou autre
+            console.error('Erreur:', error);
+            alert('Une erreur est survenue. Veuillez réessayer plus tard.');
+        });
     });
 }
