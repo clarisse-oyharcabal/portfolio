@@ -148,7 +148,7 @@ if (contactForm) {
             if (response.ok) {
                 // Si la soumission réussit
                 console.log('Réponse de Formspree:', response);
-                if (response.ok || response.status === 202 || response.status === 201) {
+                if (response.ok) {
                     alert('Message envoyé avec succès, merci !');
                     contactForm.reset();
             } else {
