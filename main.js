@@ -145,12 +145,12 @@ if (contactForm) {
             body: formData
         })
         .then(response => {
+            console.log('Réponse du serveur:', response);
+            console.log('Code de statut:', response.status); // Affiche le code de statut HTTP
             if (response.ok) {
                 // Si la soumission réussit
-                console.log('Réponse de Formspree:', response);
-                if (response.ok) {
-                    alert('Message envoyé avec succès, merci !');
-                    contactForm.reset();
+                alert('Message envoyé avec succès, merci !');
+                contactForm.reset();
             } else {
                 // Si la soumission échoue (erreur côté serveur)
                 console.error('Erreur de soumission : ', response.status);
