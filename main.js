@@ -135,7 +135,6 @@ document.querySelectorAll('.project-card').forEach(card => {
 
 // Gestion du formulaire de contact
 const contactForm = document.getElementById('contact-form');
-const errorMessage = document.getElementById('error-message'); // Element pour afficher l'erreur 
 if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -150,17 +149,15 @@ if (contactForm) {
                 // Si la soumission réussit
                 alert('Message envoyé avec succès, merci !');
                 contactForm.reset();
-                errorMessage.style.display = 'none'; // Cache le message d'erreur si la soumission réussit
             } else {
                 // Si la soumission échoue (erreur côté serveur)
-                console.error('Erreur de soumission : ', reponse.status);
-                errorMessage.style.display = 'block'; // Affiche le message d'erreur
+                alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
             }
         })
         .catch(error => {
             // Erreur réseau ou autre
             console.error('Erreur réseau:', error);
-            errorMessage.style.display = 'block'; // Affiche le message d'erreur
+            alert('Une erreur est survenue. Veuillez réessayer plus tard.');
         });
     });
 }
