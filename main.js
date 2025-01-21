@@ -147,10 +147,13 @@ if (contactForm) {
         .then(response => {
             if (response.ok) {
                 // Si la soumission réussit
+                consol.log('Réponse de Foormspree:', resmonse);
+                if (response.ok || response.status === 202 || response.status === 201) {
                 alert('Message envoyé avec succès, merci !');
                 contactForm.reset();
             } else {
                 // Si la soumission échoue (erreur côté serveur)
+                console.error('Erreur de soumission : ', response.status);
                 alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
             }
         })
