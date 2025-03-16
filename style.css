@@ -19,7 +19,6 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 
-
 }
 
 #particles-js {
@@ -398,6 +397,8 @@ transition: transform 0.5s ease; /* Ajoute une transition fluide */
     width: 100%;
     max-width: 1500px;
     padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    align-items: start;
 }
 
 .project-card {
@@ -406,6 +407,15 @@ transition: transform 0.5s ease; /* Ajoute une transition fluide */
     padding: 1.5rem;
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 1.5rem; /* Espacement entre les projets */
+    min-height: 300px; 
+    overflow: hidden; 
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Assure que le contenu utilise toute la hauteur de la carte */
 }
 
 .project-card:hover {
@@ -416,15 +426,41 @@ transition: transform 0.5s ease; /* Ajoute une transition fluide */
 .project-content h3 {
     color: var(--primary-color);
     margin-bottom: 0.5rem;
+    
 }
 
 .project-links {
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    
+}
+
+.project-summary {
+    display: block;
 }
 
 
+.project-details {
+    margin-top: 1rem;
+    display: none; /* Masqué par défaut */
+    flex-grow: 1; /* Permet au contenu détaillé de prendre l'espace disponible */
+    overflow: auto;
+}
+
+.see-more {
+    margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    border: none;
+    cursor: pointer;
+    align-self: flex-start; /* Aligne le bouton à gauche */
+}
+
+.see-more:hover {
+    background-color: #00e1ff;
+    color: var(--dark-bg);
+}
 
 .btn {
     font-size: 0.7rem;

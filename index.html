@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clarisse Oyharcabal Portfolio </title>
+    <title>Clarisse Oyharcabal Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -26,7 +26,6 @@
         </ul>
     </nav>
 
-
     <div class="banniere">
         <p>Je suis à la recherche d'une alternance en IA et/ou Data Science à partir d'octobre 2025. Je reste à l'écoute de toute opportunité. N'hésitez pas à me contacter !</p>
     </div>
@@ -35,43 +34,51 @@
         <section id="presentation" class="section">
             <div class="container fade-in content-wrapper">
                 <div class="text-content">
-                <h1>
-                    <span class=gradient-text> Intelligence Artificielle | Data  </span>
-                    <span class="highlight-text"><br>& Innovation</span>
-                </h1>
-                <p class="typing-text">Je suis Clarisse Oyharçabal, j'ai 24 ans et je suis étudiante en première année en Bachelor IT à l'école de La Plateforme à Marseille, </p>
-            </div>
-            <div class ="image-social"> 
-                <img src="images/femme.jpg" alt="Photo" class="logo-photo">
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/clarisseoyhar%C3%A7abal/" class="social-btn" target="_blank">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/clarisse-oyharcabal" class="social-btn" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:clarisse.oyharcabal@laplateforme.io" class="social-btn">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="images/CV-ClarisseOyharcabal.pdf" class="social-btn cv-btn">
-                        <i class="fas fa-address-card"></i> 
-                    </a>
+                    <h1>
+                        <span class="gradient-text">Intelligence Artificielle | Data</span>
+                        <span class="highlight-text"><br>& Innovation</span>
+                    </h1>
+                    <p class="typing-text">Je suis Clarisse Oyharçabal, j'ai 24 ans et je suis étudiante en première année en Bachelor IT à l'école de La Plateforme à Marseille,</p>
+                </div>
+                <div class="image-social">
+                    <img src="images/femme.jpg" alt="Photo" class="logo-photo">
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/clarisseoyhar%C3%A7abal/" class="social-btn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/clarisse-oyharcabal" class="social-btn" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:clarisse.oyharcabal@laplateforme.io" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="images/CV-ClarisseOyharcabal.pdf" class="social-btn cv-btn">
+                            <i class="fas fa-address-card"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-           </div>
         </section>
 
         <section id="projets" class="section">
             <h2>Mes Projets</h2>
             <div class="projects-grid">
+                <!-- Projet 1 : Tic-Tac-Toe -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Tic-Tac-Toe</h3>
-                        <p>Jeu du Tic-Tac-Toe (morpion) avec un bot de niveau facile et un bot de niveau moyen. Développer ce jeu a été un défi stimulant, 
-                            mêlant logique, stratégie et programmation, renforçant ainsi mes compétences en Python et en algorithmique. L'algorithme minimax est en cours de développement. J'ai
-                            d'abord défini un arbre de décision représentant tous les coups possibles. Ensuite, j'ai évalué chaque position avec une fonction de score,
-                            où l'optimisation de la décision se fait par alternance entre maximiser et minimiser les scores en fonction du joueur. Enfin, j'ai implémenté la recherche récursive
-                            pour explorer les coups à chaque niveau de l'arbre, en choisissant le coup optimal à chaque étape.</p>
+                        <p class="project-summary">
+                            Jeu du Tic-Tac-Toe (morpion) avec un bot de niveau facile et un bot de niveau moyen. Développer ce jeu a été un défi stimulant...
+                        </p>
+                        <div class="project-details" style="display: none;">
+                            <p>
+                                mêlant logique, stratégie et programmation, renforçant ainsi mes compétences en Python et en algorithmique. L'algorithme minimax est en cours de développement. J'ai
+                                d'abord défini un arbre de décision représentant tous les coups possibles. Ensuite, j'ai évalué chaque position avec une fonction de score,
+                                où l'optimisation de la décision se fait par alternance entre maximiser et minimiser les scores en fonction du joueur. Enfin, j'ai implémenté la recherche récursive
+                                pour explorer les coups à chaque niveau de l'arbre, en choisissant le coup optimal à chaque étape.
+                            </p>
+                        </div>
+                        <button class="btn see-more">Voir plus</button>
                         <div class="project-links">
                             <a href="https://github.com/clarisse-oyharcabal/TicTacToe.git" class="btn" target="_blank">Code</a>
                             <div class="project-lang">
@@ -80,14 +87,23 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Projet 2 : FanSite -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3>FanSite</h3>
-                        <p>Site de type FanSite sur les pionnières de l'informatique notamment Ada Lovelace. Nous étions en groupe de trois. 
-                            Je me suis occupée de l'accueil principale "WomenInTech" (black and white), du formulaire de contact et de la partie 
-                            de Ada Lovelace. J’ai particulièrement apprécié me familiariser avec ces deux langages, et une fois que j’ai commencé à les maîtriser,
-                            j’ai pris un réel plaisir à peaufiner les détails esthétiques. Cela m’a permis non seulement d’améliorer l’expérience visuelle pour l’utilisateur, 
-                            mais aussi de relever des défis spécifiques, comme l’optimisation du code pour une meilleure performance, ou encore l’adaptation du design à différents appareils et résolutions.</p>
+                        <p class="project-summary">
+                            Site de type FanSite sur les pionnières de l'informatique notamment Ada Lovelace. Nous étions en groupe de trois...
+                        </p>
+                        <div class="project-details" style="display: none;">
+                            <p>
+                                Je me suis occupée de l'accueil principale "WomenInTech" (black and white), du formulaire de contact et de la partie
+                                de Ada Lovelace. J’ai particulièrement apprécié me familiariser avec ces deux langages, et une fois que j’ai commencé à les maîtriser,
+                                j’ai pris un réel plaisir à peaufiner les détails esthétiques. Cela m’a permis non seulement d’améliorer l’expérience visuelle pour l’utilisateur,
+                                mais aussi de relever des défis spécifiques, comme l’optimisation du code pour une meilleure performance, ou encore l’adaptation du design à différents appareils et résolutions.
+                            </p>
+                        </div>
+                        <button class="btn see-more">Voir plus</button>
                         <div class="project-links">
                             <a href="https://github.com/clarisse-oyharcabal/Fansite1.git" class="btn" target="_blank">Code</a>
                             <a href="https://clarisse-oyharcabal.github.io/Fansite1/" class="btn" target="_blank">Demo</a>
@@ -98,15 +114,44 @@
                         </div>
                     </div>
                 </div>
+
+                  <!-- Projet 3 : Pokemon -->
+                  <div class="project-card">
+                    <div class="project-content">
+                        <h3>Pokemon</h3>
+                        <p class="project-summary">
+                            Développer ce mini-jeu de combat Pokémon a été une expérience stimulante, alliant gestion de données, interactions avec PokeAPI et création d'une interface graphique avec Pygame...
+                        </p>
+                        <div class="project-details" style="display: none;">
+                            <p>
+                                J'ai implémenté un système de combat au tour par tour, calculant les dégâts en fonction des statistiques des Pokémon et assurant une interface intuitive.
+                                Ce projet a renforcé mes compétences en Python, en manipulation de données JSON et en gestion de dépendances. Il m'a également permis d'améliorer mes
+                                capacités en résolution de problèmes et en travail d'équipe dans un cadre éducatif.
+                            </p>
+                        </div>
+                        <button class="btn see-more">Voir plus</button>
+                        <div class="project-links">
+                            <a href="https://github.com/clarisse-oyharcabal/pokemon.git" class="btn" target="_blank">Code</a>
+                            <a href="#" class="btn" target="_blank">Demo</a>
+                            <div class="project-lang">
+                                <span class="badge">HTML</span>
+                                <span class="badge">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Projet 3 : Création d'une IA -->
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Création d'une IA | En cours...</h3>
-                        <p>Solution innovante qui combine intelligence artificielle, psychologie et interaction humaine pour transformer l'expérience éducative.</p>
-                        <div class="project-links">
-                            <div class="project-lang">
-                                <span class="badge">Python</span>
-                                <span class="badge">R</span>
-                            </div>
+                        <p>
+                            Solution innovante qui combine intelligence artificielle, psychologie et interaction humaine pour transformer l'expérience éducative.
+                            
+                        </p>
+                        <div class="project-lang">
+                            <span class="badge">Python</span>
+                            <span class="badge">R</span>
                         </div>
                     </div>
                 </div>
@@ -117,15 +162,15 @@
             <h2>Me Contacter</h2>
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjkknaly" method="POST">
                 <div class="form-group">
-                    <input type="text" id="name" name = "name" required>
+                    <input type="text" id="name" name="name" required>
                     <label for="name">Nom</label>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name = "email" required>
+                    <input type="email" id="email" name="email" required>
                     <label for="email">Email</label>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" name= "message" required></textarea>
+                    <textarea id="message" name="message" required></textarea>
                     <label for="message">Message</label>
                 </div>
                 <button type="submit" class="btn">Envoyer</button>
@@ -137,9 +182,7 @@
         <p>&copy; 2025 Clarisse Oyharçabal - Tous droits réservés</p>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script src="main.js"></script>     
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
-
-

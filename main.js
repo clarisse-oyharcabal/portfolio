@@ -164,4 +164,21 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-});
+
+        // Gestion des boutons "Voir plus"
+        document.querySelectorAll('.see-more').forEach(button => {
+            button.addEventListener('click', () => {
+                // Trouver le contenu détaillé associé à ce bouton
+                const details = button.previousElementSibling;
+    
+                // Basculer l'affichage du contenu détaillé
+                if (details.style.display === 'none' || details.style.display === '') {
+                    details.style.display = 'block';
+                    button.textContent = 'Voir moins';
+                } else {
+                    details.style.display = 'none';
+                    button.textContent = 'Voir plus';
+                }
+            });
+        });
+    });
